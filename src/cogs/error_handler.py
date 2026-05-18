@@ -31,10 +31,9 @@ async def error_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     message_user_data = trancute_message(
         f"<pre>context.user_data = {html.escape(str(context.user_data))}</pre>\n\n"
     )
-    message_error = trancute_message(
-        message=f"<pre>{html.escape(tb_string)}</pre>",
-        reverse=True,
-    )
+    escaped_tb = html.escape(tb_string)
+    truncated_tb = trancute_message(escaped_tb, limit=4090, reverse=True)
+    message_error = f"<pre>{truncated_tb}</pre>"
 
     error_messages = [
         message_intro,

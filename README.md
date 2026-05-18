@@ -97,4 +97,8 @@ To use the bot, simply direct message it or add it to a group, depending on what
 
 You can use the `/help` command to learn more about how to use the bot.
 
-To download a video file, simply send/forward it to the bot. The bot will then ask you to confirm the download with a 'Yes' or 'No' button. Once you confirm, the bot will download the video file and notify you once the download is complete.
+To download a video file, simply send or forward it to the bot. Both compressed videos and videos sent as files are supported. The bot will start downloading immediately — no confirmation needed.
+
+**Queue:** if you forward multiple videos at once, they are downloaded one at a time. Each queued video receives an "⏳ In coda" notification and starts automatically when the previous download finishes.
+
+**Progress:** the bot shows a live progress bar with percentage, size, and speed — updated every 2 seconds for both the Telegram download phase and the local copy phase.
